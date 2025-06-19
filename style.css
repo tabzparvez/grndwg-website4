@@ -1,0 +1,219 @@
+/* grndwg Meme Token Official Website Styles */
+
+:root {
+    --primary-green: #00ff66;
+    --primary-green-dark: #00cc52;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f8fa;
+    color: #222;
+}
+
+header {
+    background: #222;
+    color: #fff;
+    padding: 1rem 0;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+}
+.logo {
+    height: 44px;
+    width: 44px;
+    margin-right: 1.2rem;
+    flex-shrink: 0;
+    object-fit: contain;
+    background: #111;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    display: block;
+}
+header h1 {
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+    margin: 0 2.5rem 0 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    white-space: nowrap;
+}
+nav {
+    display: flex;
+    gap: 1.5rem;
+    flex: 2 1 auto;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    margin: 0;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 1.08rem;
+    transition: background 0.2s, color 0.2s;
+    background: transparent;
+    border: 2px solid transparent;
+}
+nav a:hover, nav a.active {
+    background: #ffb347;
+    color: #222;
+    border: 2px solid #ffb347;
+}
+.hero {
+    background: linear-gradient(120deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+    color: #222;
+    padding: 4rem 0 3rem 0;
+    text-align: center;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+.cta {
+    background: #222;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+}
+.cta:hover {
+    background: #ffb347;
+    color: #222;
+}
+section {
+    padding: 3rem 0;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+h3 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+ul, ol {
+    font-size: 1.1rem;
+    margin-left: 1.5rem;
+}
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.contract-address-box {
+    display: inline-flex;
+    align-items: center;
+    background: #fffbe6;
+    border: 1px solid #ffb347;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    margin-top: 1.5rem;
+    font-size: 1.05rem;
+    box-shadow: 0 2px 8px rgba(255, 179, 71, 0.08); /* electric green shadow */
+}
+#contract-address {
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: 0.75rem;
+    color: #222;
+    user-select: all;
+}
+#copy-contract {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s;
+    border-radius: 4px;
+}
+#copy-contract:hover {
+    background: #ffb34722;
+}
+#copy-contract svg {
+    vertical-align: middle;
+}
+.wallet-connect {
+    position: static;
+    margin-left: 1.5rem;
+    background: #fff;
+    color: #222;
+    border: 2px solid #ffb347;
+    transition: background 0.2s, color 0.2s;
+    z-index: 2;
+    font-size: 0.95rem;
+    padding: 0.4rem 1.1rem;
+    min-width: unset;
+    height: 2.1rem;
+    box-sizing: border-box;
+}
+.wallet-connect:hover {
+    background: #ffb347;
+    color: #fff;
+}
+@media (max-width: 900px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav {
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+        justify-content: flex-start;
+    }
+    .wallet-connect {
+        margin-left: 0.7rem;
+        font-size: 0.9rem;
+        padding: 0.3rem 0.8rem;
+        height: 1.7rem;
+    }
+    .logo {
+        margin-bottom: 0.5rem;
+    }
+}
+@media (max-width: 700px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav {
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    nav a {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .wallet-connect {
+        right: 1rem;
+        top: 1rem;
+        font-size: 0.9rem;
+        padding: 0.3rem 0.8rem;
+        height: 1.7rem;
+    }
+}
