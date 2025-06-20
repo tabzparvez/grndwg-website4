@@ -1,0 +1,84 @@
+/* style.css for GRNDWG - The Green Dog Token */
+:root {
+    --green-primary: #00ff66;
+    --green-secondary: #00cc44;
+    --green-dark: #009933;
+    --bg-dark: #121212;
+    --bg-darker: #0a0a0a;
+    --bg-card: #1a1a1a;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-dark);
+    color: white;
+    overflow-x: hidden;
+}
+.glow {
+    text-shadow: 0 0 10px rgba(0, 255, 102, 0.7);
+}
+.hero-gradient {
+    background: radial-gradient(circle at center, rgba(0, 255, 102, 0.15) 0%, rgba(18, 18, 18, 0) 70%);
+}
+.token-card {
+    background: rgba(26, 26, 26, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 102, 0.2);
+    transition: all 0.3s ease;
+}
+.token-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 255, 102, 0.2);
+}
+.dog-animation {
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+.logo-spin {
+    animation: spin 10s linear infinite;
+}
+@keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.star {
+    position: absolute;
+    background-color: var(--green-primary);
+    border-radius: 50%;
+    animation: twinkle var(--duration) ease-in-out infinite;
+    opacity: var(--opacity);
+}
+@keyframes twinkle {
+    0%, 100% { opacity: var(--opacity); }
+    50% { opacity: 0.2; }
+}
+.btn-green {
+    background: linear-gradient(135deg, var(--green-primary), var(--green-secondary));
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.btn-green:hover {
+    background: linear-gradient(135deg, var(--green-secondary), var(--green-dark));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 102, 0.3);
+}
+.progress-green {
+    background: var(--green-primary);
+}
+.text-green-glow {
+    color: var(--green-primary);
+    text-shadow: 0 0 10px rgba(0, 255, 102, 0.5);
+}
+.border-green {
+    border-color: var(--green-primary);
+}
