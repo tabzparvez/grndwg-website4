@@ -21,6 +21,8 @@
             background-color: var(--bg-dark);
             color: white;
             overflow-x: hidden;
+            width: 100vw;
+            min-width: 0;
         }
         .glow {
             text-shadow: 0 0 10px rgba(0, 255, 102, 0.7);
@@ -108,6 +110,26 @@
         @keyframes floatBounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-15px); }
+        }
+        .container {
+            width: 100%;
+            max-width: 100vw;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media (max-width: 768px) {
+            .token-card {
+                min-width: 90vw;
+                max-width: 98vw;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .container {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -417,3 +439,4 @@
     </script>
 </body>
 </html>
+
